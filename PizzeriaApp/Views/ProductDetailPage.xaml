@@ -1,0 +1,17 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzeriaApp.Views.ProductDetailPage"
+             Title="Product details">
+    
+    <StackLayout Padding="10">
+        <Image x:Name="ProductImage" WidthRequest="150" HeightRequest="150" Aspect="AspectFill"/>
+
+        <Label x:Name="ProductNameLabel" FontSize="Large" FontAttributes="Bold"/>
+        <Label x:Name="ProductDescriptionLabel" FontSize="Medium"/>
+        <Label x:Name="ProductIngredientsLabel" FontSize="Medium"/>
+        <Label x:Name="ProductPriceLabel" FontSize="Medium" FontAttributes="Bold"/>
+
+        <Button Text="Edit" Clicked="OnEditClicked"/>
+        <Button Text="Delete" Clicked="OnDeleteClicked" TextColor="Red"/>
+    </StackLayout>
+</ContentPage>

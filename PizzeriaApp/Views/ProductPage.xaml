@@ -1,0 +1,37 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzeriaApp.Views.ProductPage">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="{Binding CategoryName}" FontSize="24" HorizontalOptions="Center" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Edit menu" Clicked="OnEditCategoryClicked" />
+                <Button Text="Delete menu" Clicked="OnDeleteCategoryClicked" />
+            </StackLayout>
+
+            <Button Text="Add new product" Clicked="OnAddProductClicked" />
+
+            <CollectionView x:Name="ProductCollectionView" SelectionMode="Single" SelectionChanged="OnProductSelected"
+                            HeightRequest="600">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="10">
+                            <StackLayout>
+                                <Image Source="{Binding ImagePath}" HeightRequest="100" />
+                                <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                <Label Text="{Binding Price, StringFormat='Price: {0:C}'}" />
+                                <Label Text="{Binding Description}" />
+
+                                <Button Text="Details" CommandParameter="{Binding .}" Clicked="OnViewProductDetailsClicked" />
+                                <Button Text="Edit" CommandParameter="{Binding .}" Clicked="OnEditProductClicked" />
+                                <Button Text="Delete" CommandParameter="{Binding .}" Clicked="OnDeleteProductClicked" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

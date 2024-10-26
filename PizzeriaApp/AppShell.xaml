@@ -1,0 +1,14 @@
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:PizzeriaApp.Views"
+       x:Class="PizzeriaApp.AppShell">
+
+    <Tab Title="Меню" Icon="icon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+    </Tab>
+
+    <ShellContent Route="AddCategoryPage" ContentTemplate="{DataTemplate local:AddCategoryPage}" />
+    <ShellContent Route="ProductPage" ContentTemplate="{DataTemplate local:ProductPage}" />
+    <ShellContent Route="AddProductPage" ContentTemplate="{DataTemplate local:AddProductPage}" />
+    <ShellContent Route="ProductDetailPage" ContentTemplate="{DataTemplate local:ProductDetailPage}" />
+</Shell>

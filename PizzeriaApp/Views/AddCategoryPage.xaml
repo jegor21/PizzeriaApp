@@ -1,0 +1,14 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzeriaApp.Views.AddCategoryPage"
+             Title="Add menu">
+    
+    <StackLayout Padding="10">
+        <Entry x:Name="CategoryNameEntry" Placeholder="Menu name"/>
+
+        <Image x:Name="CategoryImage" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" />
+        <Button Text="Select image" Clicked="OnSelectImageClicked"/>
+
+        <Button Text="Save menu" Clicked="OnSaveClicked"/>
+    </StackLayout>
+</ContentPage>

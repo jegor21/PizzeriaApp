@@ -1,0 +1,16 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzeriaApp.Views.AddProductPage"
+             Title="Product page">
+    
+    <StackLayout Padding="10">
+        <Entry x:Name="ProductNameEntry" Placeholder="Product name" />
+        <Entry x:Name="ProductDescriptionEntry" Placeholder="Description" />
+        <Entry x:Name="ProductIngredientsEntry" Placeholder="Ingredients" />
+        <Entry x:Name="ProductPriceEntry" Placeholder="Price" Keyboard="Numeric" />
+        <Image x:Name="ProductImage" WidthRequest="200" HeightRequest="200" />
+
+        <Button Text="Select image" Clicked="OnSelectImageClicked" />
+        <Button Text="Continue" Clicked="OnSaveClicked" />
+    </StackLayout>
+</ContentPage>
